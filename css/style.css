@@ -7,12 +7,29 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: 3px solid black;
-    justify-items: center;
+    justify-content: center;
+    align-content: center;
     grid-row-gap: 10px;
     width: 90%;
 }
 
 div{
-    border: 10px #a52a2a;
-    justify-items: center;
+    border: 10px solid #a52a2a;
+    text-align: center;
+    vertical-align: middle;
+    
+}
+
+@media (min-height: 900px){
+
+    .container{
+        grid-template-columns: 30% 30% 30%;
+        grid-gap: 10px;
+    }
+
+    div:nth-child(even){
+        border: 10px #b284be dashed;
+
+    }
+
 }
